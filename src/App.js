@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Routes from './components/Routes';
+import Routes from './components/Routess';
 
 
 const App = () => {
