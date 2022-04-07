@@ -8,7 +8,7 @@ export const StateContextProvider = ({ children }) => {
 
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('Earth');
+    const [searchTerm, setSearchTerm] = useState('Elon Musk');
 
     // sompli fetching result from base url same has movies api we did!
     const getResults = async (url) => {
@@ -33,7 +33,6 @@ export const StateContextProvider = ({ children }) => {
         } else {
             setResults(data.results);
         }
-
         
         setIsLoading(false);
     }

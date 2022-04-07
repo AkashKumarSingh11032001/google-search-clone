@@ -1,11 +1,11 @@
 import React from 'react';
-import { Switch , Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Results from './Results';
 
 
 const Routess = () => {
-  return (
+  <div className="p-4">
     <Switch>
       <Route exact path="/">
         <Redirect to="/search" />
@@ -24,7 +24,7 @@ const Routess = () => {
       </Route>
 
     </Switch>
-  );
+  </div>
 }
 
 export default Routess;
