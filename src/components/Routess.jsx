@@ -5,7 +5,7 @@ import Results from './Results';
 
 
 const Routess = () => {
-  <div className="p-4">
+  return (
     <Switch>
       <Route exact path="/">
         <Redirect to="/search" />
@@ -24,7 +24,7 @@ const Routess = () => {
       </Route>
 
     </Switch>
-  </div>
+  );
 }
 
 export default Routess;

@@ -8,7 +8,7 @@ export const StateContextProvider = ({ children }) => {
 
     const [results, setResults] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [searchTerm, setSearchTerm] = useState('Elon Musk');
+    const [searchTerm, setSearchTerm] = useState('Taj Mahal');
 
     // sompli fetching result from base url same has movies api we did!
     const getResults = async (url) => {
@@ -20,8 +20,8 @@ export const StateContextProvider = ({ children }) => {
                 'X-User-Agent': 'desktop',
                 'X-Proxy-Location': 'EU',
                 'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
-                'X-RapidAPI-Key': '290570cc43mshfad36250880468fp1bccc1jsnc5ad4c45c941'
-            },
+                'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
+              }
         });
 
         const data = await res.json();
