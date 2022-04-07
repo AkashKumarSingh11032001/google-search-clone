@@ -1,26 +1,30 @@
 import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Switch , Route, Redirect } from 'react-router-dom';
 
 import Results from './Results';
 
 
 const Routess = () => {
-  <div className="p-4">
-    <Routes>
+  return (
+    <Switch>
       <Route exact path="/">
-        <Navigate to="/search" />
+        <Redirect to="/search" />
       </Route>
-      <Route path="/images">
+      <Route exact path="/search">
+        <Results />
+      </Route>
+      <Route path="/image">
         <Results />
       </Route>
       <Route path="/news">
         <Results />
       </Route>
-      <Route path="/videos">
+      <Route path="/video">
         <Results />
       </Route>
-    </Routes>
-  </div>
+
+    </Switch>
+  );
 }
 
 export default Routess;
